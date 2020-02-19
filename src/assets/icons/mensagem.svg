@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.114" height="24.142" viewBox="0 0 27.114 24.142">
+  <g id="Grupo_450" data-name="Grupo 450" transform="translate(-1061 -815)">
+    <g id="Grupo_309" data-name="Grupo 309" transform="translate(489.563 -5094.76)">
+      <g id="Caminho_170" data-name="Caminho 170" transform="translate(571.437 5909.76)" fill="none">
+        <path d="M0,0H27.114V18H12.58l-8.12,6.142V18H0Z" stroke="none"/>
+        <path d="M 2 2 L 2 16 L 4.46051025390625 16 L 6.46051025390625 16 L 6.46051025390625 18 L 6.46051025390625 20.12110710144043 L 11.3735294342041 16.40491104125977 L 11.90884017944336 16 L 12.58004951477051 16 L 25.11425971984863 16 L 25.11425971984863 2 L 2 2 M 0 0 L 27.11425971984863 0 L 27.11425971984863 18 L 12.58004951477051 18 L 4.46051025390625 24.1416015625 L 4.46051025390625 18 L 0 18 L 0 0 Z" stroke="none" fill="#354e8f"/>
+      </g>
+    </g>
+    <g id="Grupo_310" data-name="Grupo 310" transform="translate(210 -5316)">
+      <g id="Elipse_45" data-name="Elipse 45" transform="translate(857 6138)" fill="#354e8f" stroke="#354e8f" stroke-width="1">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.5" fill="none"/>
+      </g>
+      <g id="Elipse_46" data-name="Elipse 46" transform="translate(863 6138)" fill="#354e8f" stroke="#354e8f" stroke-width="1">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.5" fill="none"/>
+      </g>
+      <g id="Elipse_47" data-name="Elipse 47" transform="translate(869 6138)" fill="#354e8f" stroke="#354e8f" stroke-width="1">
+        <circle cx="2" cy="2" r="2" stroke="none"/>
+        <circle cx="2" cy="2" r="1.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,215 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+p {
+
+  font-family: NHaasGroteskTXPro-55Rg;
+
+}
+
+
+#myVideo {
+  // position: fixed;
+  right: 0;
+  position: relative;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  // overflow: hidden;
+
+}
+
+.video::before {
+  content: ' ';
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.46);
+  // z-index: 10;
+}
+
+.box-white {
+
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  margin-top: -25%;
+  min-height: 50vh;
+  z-index: 999;
+  position: relative;
+
+
+  @include media-breakpoint-down(md) {
+    top: 0;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+
+}
+
+.seta {
+  transform: scale(1);
+  transition: all (1s);
+
+  &:hover {
+    transform: scale(1.07);
+    transition: all (500ms);
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    font-family: NHaasGroteskTXPro-75Bd;
+
+  }
+}
+
+.text-case {
+  .seta {
+    padding: 2%;
+    text-transform: uppercase;
+
+    span{
+      img{
+        margin: 3%;
+      }
+    }
+  }
+  h1 {
+    padding: 3% 6%;
+
+    @include media-breakpoint-down(md) {
+      padding: 3% 0;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+}
+
+.descricao-case{
+  padding: 3% 5% 3% 2%;
+
+}
+
+.tour{
+
+  @include media-breakpoint-down(md) {
+    padding-top: 8%;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    padding-top: 5%;
+  }
+  p{
+    width: 50%;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      width: 90%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+  img {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+}
+
+
+
+.space{
+  padding-top: 20%;
+}
+
+.text-item{
+  padding: 13% 13% 13% 10%;
+}
+
+.escritorios{
+  position: relative;
+  transform : scale(1);
+    transition: all (1s);
+    cursor    : pointer;
+  top: 100px;
+  &:hover {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.39);
+    transform : scale(1.05);
+    transition: all (500ms);
+}
+}
+
+.text-box{
+  padding: 10% 5%;
+  background-color: white;
+  a{
+    padding: 0;
+  }
+}
+
+.lazer{
+  padding: 15% 0;
+}
+
+.photo {
+  img {
+    @include media-breakpoint-down(md) {
+      height: 30vh;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+}
+
+/* Configuração do carousel*/
+.carousel-indicators li {
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+}
+.carousel-slide {
+  padding: 15%;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+}
+
+.desktop {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+.mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.btn-volt-outline{
+font-family:NHaasGroteskTXPro-75Bd;
+
+}

@@ -1,0 +1,226 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+p {
+
+    font-family: NHaasGroteskTXPro-55Rg;
+
+}
+
+
+@keyframes effect {
+    from {
+        transform: translateX(-500px);
+    }
+}
+
+.cases-carousel {
+    animation: effect 1s;
+}
+
+.cover-cases {
+    position: sticky;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    z-index : 10;
+    height  : 100vh;
+    &.mobile {
+    }
+    // max-height: 100%;
+    .box-white {
+        background-color: white;
+
+        @include media-breakpoint-down(md) {
+            width      : 95%;
+            padding    : 30px 20px;
+            margin-top : 100%;
+            margin-left: 2%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width      : 60%;
+            padding    : 40px 20px 30px 50px;
+            margin-top : 30%;
+            margin-left: 5%;
+        }
+
+        P {
+            color         : #868686;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.case {
+    display            : flex;
+    height             : 100vh;
+
+    &.mobile {
+        .case-description {
+            color: #fff;
+            font-size: 17px;
+            padding: 0 50px;
+            position: relative;
+            top: 100px;
+        }
+        .case-item {
+            height    : 80vh;
+
+        }
+        .case-author {
+            width  : 100%;
+            padding: 20px;
+        }
+    }
+    .case-item {
+        border-top: 10px solid $theme-color-4;
+        margin    : 0 auto;
+        display   : flex;
+        flex-wrap : wrap;
+        align-self: flex-end;
+        height    : 85vh;
+        z-index   : 11;
+
+        @include media-breakpoint-down(md) {
+            width  : 90%;
+            padding: 0px;
+        }
+
+        @include media-breakpoint-up(md) {
+            background-color: white;
+            width           : 450px;
+            padding         : 5%;
+        }
+    }
+
+    .case-prev {
+        background-color: transparent;
+        align-self      : flex-end;
+        margin-bottom   : 50px;
+        transform       : scale(0.8);
+        position        : relative;
+        z-index         : 11;
+    }
+
+    .case-description {
+        @include media-breakpoint-down(md) {
+            background-color: transparent;
+        }
+
+        @include media-breakpoint-up(md) {
+            background-color: white;
+        }
+
+        font-size: 24px;
+    }
+
+    .case-author {
+        align-self   : flex-end;
+        // margin-top: 20vh;
+        @include media-breakpoint-down(md) {
+            background-color: white;
+        }
+    }
+
+    .avatar-info {
+        display  : flex;
+        flex-wrap: nowrap;
+    }
+
+    &::before {
+        content   : '';
+        position  : absolute;
+        bottom    : 0;
+        left      : 0;
+        width     : 100%;
+        height    : 50%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.301), transparent, transparent);
+        z-index   : 10;
+    }
+
+    &.mobile::before {
+        height    : 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.521),  transparent);
+    }
+
+}
+
+.banner {
+    padding: 7% 0;
+}
+
+
+
+.arrows {
+    position: absolute;
+    left    : 0;
+    width   : 100%;
+    z-index : 15;
+    padding : 0 20px;
+
+  
+    top: 49vh;
+
+    &.mobile {
+    }
+    .left-arrow {
+        float: left;
+    }
+
+    .right-arrow {
+        float: right;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        transform : rotate(0deg) scale(1);
+        transition: all 1s;
+    }
+
+    .right-arrow:hover,
+    .left-arrow:hover {
+        transform : rotate(360deg) scale(1.1);
+        transition: all 500ms;
+
+    }
+
+
+}
+
+.transition-smoth {
+    @include media-breakpoint-up(md) {
+        transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+}
+
+.footer-section {
+    height: 100vh;
+}
+
+
+
+.paralax-scroll {
+    height    : 100vh;
+    overflow-Y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width     : 1px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+}
+
+.content-paralax {
+    height: 105vh;
+}

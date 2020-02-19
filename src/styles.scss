@@ -1,0 +1,274 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$volt-primary                   : mat-palette($mat-indigo);
+$volt-accent                    : mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$volt-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$volt-theme: mat-light-theme($volt-primary, $volt-accent, $volt-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($volt-theme);
+
+
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+@include font-face('NHaasGroteskTXPro-It', './assets/fonts/nhaas-italic');
+@include font-face('NHaasGroteskTXPro-75Bd', './assets/fonts/nhaas-bold');
+@include font-face('NHaasGroteskTXPro-55Rg', './assets/fonts/nhaas-regular');
+@include font-face('P22MackinacPro-ExtraBold', './assets/fonts/p22');
+@include font-face('SpaceMono-Regular', './assets/fonts/spacemono');
+
+.box-amarelo {
+    background-color: $theme-color-5;
+
+    position: absolute;
+
+    @include media-breakpoint-down(md) {
+        height     : 45vh;
+        width      : 80%;
+        margin-left: 0;
+    }
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        height     : 600px;
+        width      : 400px;
+        margin-left: 9%;
+    }
+
+    &.v1 {
+        background-color: $theme-color-8;
+        position        : relative;
+
+        @include media-breakpoint-down(md) {
+            left   : 10%;
+            top    : -17%;
+            height : 90%;
+            width  : 90%;
+            padding: 15% 5% 10% 5%;
+        }
+
+        @include media-breakpoint-up(md) {}
+
+        @include media-breakpoint-up(lg) {
+            height     : 230px;
+            width      : 730px;
+            margin-left: none;
+            right      : 53%;
+            top        : 25%;
+            padding    : 20px;
+        }
+    }
+
+}
+
+.solucoes {
+    padding: 20px 80px;
+
+    .escritorios {
+        background-color: white;
+        padding         : 20px;
+        z-index         : 999;
+        margin-top      : 10%;
+
+        // box-shadow: 0px 18px 21px -17px rgba(0,0,0,0.57);
+    }
+}
+
+.bg-beje {
+    background-color: $theme-color-9;
+
+
+
+}
+
+.bg-preto {
+    background-color: $theme-color-3;
+    z-index         : -1;
+    height          : 100vh;
+
+}
+
+
+
+// Card
+
+
+.cards-post {
+    box-shadow: -1px 0px 29px -2px rgba(0, 0, 0, 0.75);
+    transform : scale(1);
+    transition: all (1s);
+    cursor    : pointer;
+    border    : none;
+
+    @include media-breakpoint-down(md) {
+        width: 98%;
+    }
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        width: 90%;
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.39);
+        transform : scale(1.05);
+        transition: all (500ms);
+    }
+
+    .card-post {
+
+        padding   : 5%;
+        border    : none;
+        text-align: left;
+
+        h3 {
+            color      : black;
+            font-family: SpaceMono-Regular;
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.0em;
+            }
+
+            @include media-breakpoint-up(md) {}
+
+            @include media-breakpoint-up(lg) {
+                font-size: 1.4em;
+            }
+        }
+
+        p {
+            color      : gray;
+            font-family: NHaasGroteskTXPro-55Rg;
+
+            @include media-breakpoint-down(md) {
+                font-size: 0.9em;
+            }
+
+            @include media-breakpoint-up(md) {}
+
+            @include media-breakpoint-up(lg) {
+                font-size: 0.8em;
+            }
+        }
+
+
+
+    }
+
+    .header-image-post {
+        background-size: cover;
+
+
+        @include media-breakpoint-down(md) {
+            height: 30vh;
+        }
+
+        @include media-breakpoint-up(md) {}
+
+        @include media-breakpoint-up(lg) {
+            height: 45vh;
+        }
+
+        img {
+            border: none;
+
+        }
+    }
+
+}
+
+.up {
+    margin-top: -10%;
+}
+
+.down {
+    margin-top: 10%;
+
+}
+
+.desktop {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+.mobile {
+    @include media-breakpoint-down(md) {
+        display       : block;
+        text-transform: uppercase;
+    }
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.container-fluid {
+    // overflow-y: hidden;
+    
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    &.paralax {
+        height: 300vh;
+        scroll-behavior: smooth;
+    }
+}
+
+
+
+
+.btn {
+    &.btn-volt-outline {
+        border-color    : $theme-color-1;
+        color           : $theme-color-1;
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,66 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@mixin font-face($name, $path)
+{
+    @font-face {
+        font-family: '#{$name}';
+        src: url('#{$path}/#{$name}.eot');
+        src:  url('#{$path}/#{$name}.eot?#iefix') format('embedded-opentype'),
+                url('#{$path}/#{$name}.svg##{$name}') format('svg'),
+                url('#{$path}/#{$name}.ttf') format('truetype'),
+                url('#{$path}/#{$name}.woff') format('woff'),
+                url('#{$path}/#{$name}.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin box-shadow($hlenght:2px, $vLengh:2px, $blur:5px, $radius: 1px, $color: #000 )
+{
+    -webkit-box-shadow: $hlenght $vLengh $blur $radius $color;
+    -moz-box-shadow: $hlenght $vLengh $blur $radius $color;
+    box-shadow: $hlenght $vLengh $blur $radius $color;
+}
+
+
+
+@mixin bg-default()
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@mixin bg-shadow()
+{
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.445);
+    }
+}
+
+
+%container-carrousel{
+    width: 100%;
+    .position-history {
+		width: 100%;
+	}
+    * { outline: none; }
+	& > div { cursor: pointer; }
+}
+
+.alpha-5{
+    opacity: 50%;
+}
+
+.d-radius{
+    border-radius: 20px;
+}

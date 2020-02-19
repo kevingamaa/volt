@@ -1,0 +1,81 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+.footer{
+  background-color: $theme-color-3;
+  
+  @include media-breakpoint-down(md) {
+    padding-bottom: 20%;
+    overflow-y: hidden;
+  }
+  @include media-breakpoint-up(md) {
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 4% 3%;
+  }
+
+  .logo {
+    img {
+      @include media-breakpoint-down(md) {
+        width: 30%;
+        padding: 5% 1% ;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+    }
+  }
+
+  h4{
+    color: white;
+    text-align: left;
+    font-family: NHaasGroteskTXPro-75Bd;
+    text-transform: uppercase;
+  }
+
+  li{
+    list-style: none;
+    color: #818181;
+    text-align: left;
+    font-family: NHaasGroteskTXPro-55Rg;
+
+  }
+  a{
+    text-decoration: none;
+    font-family: NHaasGroteskTXPro-55Rg;
+
+
+  }
+  p{
+    color: #818181;
+    text-align: left;
+    font-family: NHaasGroteskTXPro-55Rg;
+
+
+  }
+
+  .aba-contato, .aba-empresa, .aba-solucoes{
+    li{
+      margin: 30px 0;
+      font-family: NHaasGroteskTXPro-55Rg;
+
+      &:hover{
+        color: $theme-color-1;
+        font-family: NHaasGroteskTXPro-75Bd;
+
+      }
+    }
+    p{
+      margin: 30px 0;
+      font-family: NHaasGroteskTXPro-55Rg;
+      @include media-breakpoint-down(md) {
+        padding: 0% 25% 0 0 ;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+
+    }
+  }
+
+}

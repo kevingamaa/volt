@@ -1,0 +1,21 @@
+<div class="row mx-0 bg-blue-strong ">
+
+    <div [style.display]="selected ? 'block' : 'none'" class="content-step bg-extra-light" [ngClass]="navigation? 'col-lg-8': 'col-lg-12'" >
+        <!-- Content from the CdkStep is projected here -->
+        <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+    </div>
+
+    <article class="step-navigation-bar col-lg-4 mx-auto order-first " *ngIf="navigation">
+        <div class="step-navigation-list">
+            <div class="line-center">
+                <div class="line"></div>
+            </div>
+            <a class="step" *ngFor="let step of steps; let i = index;" 
+            [ngClass]="{'active': selectedIndex === i}"
+            (click)="onClick(i)">
+                <span class="step-number">{{ i+1 }}</span>
+            </a>
+        </div>
+
+    </article>
+</div>

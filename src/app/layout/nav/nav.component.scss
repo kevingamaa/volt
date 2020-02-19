@@ -1,0 +1,262 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+
+
+.menu {
+
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+  @include media-breakpoint-down(md) {
+    padding: 10%;
+    text-align: left;
+
+  }
+  @include media-breakpoint-up(md) {
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px 0;
+    text-align: center;
+  }
+}
+
+
+nav {
+
+  &.nav-white{
+    a{
+      color: white;
+    }
+    #menuToggle span{
+      background: white !important ;
+    }
+    li{
+      &::after{
+        background: white;
+      }
+      &:hover::after{
+        width: 100%;
+        transition: width .3s
+      }
+    }
+  }
+
+  a{
+    color: black;
+    font-family: SpaceMono-Regular;
+    font-size: 0.9em;
+
+
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px;
+      &::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $theme-color-1;
+        transition: width .3s;
+      }
+
+      &:hover::after{
+        width: 100%;
+        transition: width .3s
+      }
+    }
+  }
+
+}
+
+.login {
+  a {
+    border: 2px solid $theme-color-1;
+    border-radius: 30px;
+    color: $theme-color-1;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-family: NHaasGroteskTXPro-75Bd;
+    font-size: 1em;
+    letter-spacing: 1px;
+    @include media-breakpoint-down(md) {
+      border: 2px solid  $theme-color-9;
+      padding: 15px 120px;
+      font-size: 0.7em;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+
+    &:hover {
+      background-color: $theme-color-1;
+      border: none;
+      color: white;
+
+    }
+  }&.btn-solid{
+
+    a{
+      border: 3px solid white;
+
+      color: white;
+      &:hover {
+        border: none;
+        background-color: $theme-color-1;
+        color: white ;
+      }
+    }
+  }
+}
+.btn-volt {
+  &.vv {
+    @include media-breakpoint-down(md) {
+      background-color: $theme-color-2;
+      padding: 6% 12%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+}
+
+/*CONFIGURACOES MENU MOBILE*/
+
+.mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+.desktop {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.menu-mob {
+  position: relative;
+  top: -110%;
+  left: 15%;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 0;
+  left: 90%;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 10%;
+}
+#menuToggle a
+{
+  text-decoration: none;
+  color: $theme-color-9;
+  transition: color 0.3s ease;
+}
+#menuToggle input
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: $theme-color-3;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background:  $theme-color-9;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu
+{
+  text-align: left;
+  position: absolute;
+  top: -220%;
+  right: -99%;
+  width: 380px;
+  height: 814px;
+  background: $theme-color-3;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li
+{
+  padding: 2% 0;
+  font-size: 1.2em;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.logo-menu-m{
+  padding: 30% 0 15% 0;
+  display: flex;
+}
+
+.btn-menu-mobile {
+  padding: 5% 0;
+}

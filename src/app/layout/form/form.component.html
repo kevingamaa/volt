@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-lg-6 col-md-12 get-in" style="z-index: 999;">
+    <div class="circulo"></div>
+    <div class="sun">
+      <img src="./assets/icons/sun-get.svg" alt="">
+    </div>
+    <div class="text-get">
+      <p>
+        Get <br>
+        In <br>
+        <span class="text-touch">Touch </span>
+      </p>
+    </div>
+    <div class="elemento">
+      <img src="./assets/icons/elemento-contato.svg" alt="">
+    </div>
+
+
+
+  </div>
+  <div class="col-lg-6 col-md-12 text-left px-0">
+    <div class="card">
+      <div class="row">
+        <div class="col-lg-11 col-md-12 m-auto">
+          <div class="ok" *ngIf="ok">
+
+          </div>
+          <form (submit)="submitForm()"  *ngIf="!ok" [formGroup]="form" id="contact-for">
+            <div class="form-group">
+              <label>
+                <img class="icons" src="./assets/icons/assunto.svg"
+                  alt="assunto">
+                Assunto
+              </label>
+              <select formControlName="subject" class="form-control"
+                id="exampleFormControlSelect1" required>
+                <option value="escritórios-personalizados">Escritórios
+                  Personalizados</option>
+                <option value="coworking">Coworking</option>
+                <option value="time">Entrar para o Time</option>
+                <option value="parceria">Quero ser um Parceiro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>
+                <img class="icons2" src="./assets/icons/nome.svg"
+                  alt="nome">
+                Nome
+              </label>
+              <input type="text" formControlName="name"  class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label>
+                <img class="icons" src="./assets/icons/empresa.svg"
+                  alt="empresa">
+                Empresa
+              </label>
+              <input type="text" formControlName="company" class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label>
+                <img class="icons2" src="./assets/icons/email.svg"
+                  alt="email">
+                Email
+              </label>
+              <input type="email" formControlName="email" class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label>
+                <img class="icons" src="./assets/icons/telefone.svg"
+                  alt="telefone">
+                Telefone
+              </label>
+              <input type="text" formControlName="cel" name="telefone" class="form-control"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="">
+                <img class="icons" src="./assets/icons/mensagem.svg"
+                  alt="">
+                Mensagem
+              </label>
+              <textarea id="mensagem" formControlName="msg" name="mensagem" cols="30" rows="3"
+                class="form-control" required>
+              </textarea>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <button type="submit" class="btn-volt w-100" [disabled]="loading || form.invalid">Enviar &rarr;</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

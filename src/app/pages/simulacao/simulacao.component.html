@@ -1,0 +1,371 @@
+<div class="container-fluid">
+  <div class="row simulacao">
+    <div class="col-lg-9 col-md-12 mx-auto text-center">
+      <div class="arrow-back float-left">
+        <a href="javascript:history.back()">
+          <img src="./assets/icons/arrow-black-case.svg" alt="">
+          Anterior
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="row simulacao step-1">
+    <div class="col-12 text-center mx-auto">
+
+
+
+
+      <div class="form">
+        <form action="POST">
+          <!-- <div class="number">
+            <h1>
+              1
+            </h1>
+            <h1>
+              2
+            </h1>
+            <h1>
+              3
+            </h1>
+          </div> -->
+
+          <app-custom-stepper [navigation]="false">
+            <cdk-step>
+              <h1>
+                1
+              </h1>
+              <h3 class="title">
+                Em relação ao imóvel ...
+              </h3>
+              <div class="choices mt-5">
+                <div class="row">
+                  <div class="col-4 mx-auto mt-5">
+                    <a href="javascript:void(0)">
+                      Já tenho um Imóvel
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4 Text-ll mx-auto mt-5">
+                    <a href="javascript:void(0)"> Quero
+                      Comprar</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4 mx-auto mt-5">
+                    <a href="javascript:void(0)"> Quero
+                      Alugar</a>
+                  </div>
+                </div>
+                <br>
+              </div>
+              <div class="row">
+                <div class="col-lg-10 col-md-12 mt-5 botoes
+                  mx-auto text-center">
+                  <button type="button" cdkStepperNext
+                    class="btn-volt v5">
+                    Proximo
+                  </button>
+                </div>
+              </div>
+            </cdk-step>
+
+
+            <cdk-step>
+
+              <div class="row simulacao step-2">
+                <div class="col-12 text-center mx-auto">
+                  <div class="form">
+                    <form action="POST">
+                      <h1>
+                        2
+                      </h1>
+                      <h3 class="title">
+                        Já possui um arquiteto?
+                      </h3>
+                      <div class="choices mt-5">
+                        <div class="row">
+                          <div class="col-4 mx-auto
+                            mt-5">
+                            <a
+                              href="javascript:void(0)">
+                              Sim
+                            </a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4 Text-ll
+                            mx-auto mt-5">
+                            <a
+                              href="javascript:void(0)">Ainda
+                              não</a>
+                          </div>
+                        </div>
+                        <br>
+
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-10 col-md-12
+                          mt-5 botoes mx-auto
+                          text-center">
+                          <button type="button"
+                            cdkStepperNext
+                            class="btn-volt v5">
+                            Proximo
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </cdk-step>
+            <cdk-step>
+
+              <div class="row simulacao step-3">
+                <div class="col-12 text-center mx-auto">
+                  <div class="form">
+
+                    <h1>
+                      3
+                    </h1>
+                    <h3 class="title">
+                      Já tem parceria com uma <br>
+                      empresa de engenharia?
+                    </h3>
+                    <div class="choices mt-5">
+                      <div class="row">
+                        <div class="col-4 mx-auto mt-5">
+                          <a
+                            href="javascript:void(0)">
+                            Sim
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 Text-ll
+                          mx-auto mt-5">
+                          <a
+                            href="javascript:void(0)">Ainda
+                            não</a>
+                        </div>
+                      </div>
+                      <br>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-10 col-md-12 mt-5
+                        botoes mx-auto
+                        text-center">
+                        <button type="button" cdkStepperNext
+                          class="btn-volt v5">
+                          Proximo
+                        </button>
+                      </div>
+                    </div>
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </cdk-step>
+            <cdk-step>
+              <div class="row simulacao step-4">
+                <div class="col-12 text-center mx-auto">
+                  <div class="form">
+
+                    <h1>
+                      4
+                    </h1>
+                    <h3 class="title">
+                      Quantos funcionários tem a empresa?
+                    </h3>
+                    <div class="choices mt-5">
+                      <div class="row">
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            De 10 a 25
+                          </a>
+                        </div>
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            De 25 a 50
+                          </a>
+                        </div>
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            De 50 a 100
+                          </a>
+                        </div>
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            De 100 a 150
+                          </a>
+                        </div>
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            De 150 a 200
+                          </a>
+                        </div>
+                        <div class="col-6 mx-auto mt-5">
+                          <a href="javascript:void(0)"
+                            class="v1">
+                            Mais de 200
+                          </a>
+                        </div>
+                      </div>
+
+                      <br>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-10 col-md-12 mt-5
+                        botoes mx-auto
+                        text-center">
+                        <button type="button" cdkStepperNext
+                          class="btn-volt v5">
+                          Proximo
+                        </button>
+                      </div>
+                    </div>
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            </cdk-step>
+            <cdk-step>
+
+              <div class="row simulacao step-5">
+                <div class="col-12 text-center mx-auto">
+                  <div class="form">
+
+
+                    <h2 class="title">
+                      A solução ideal pra você é:
+                    </h2>
+
+                    <div class="row desktop">
+                      <div class="col-lg-11 col-md-12
+                        text-center shadow
+                        escritorios mx-auto">
+                        <div class="row">
+                          <div class="col-lg-6
+                            col-md-12 bg-default"
+                            style="background-image:
+                            url('./assets/backgrounds/bg-escritorios-personalizados-case.png');">
+                          </div>
+                          <div class="col-lg-6
+                            col-md-12 text-green
+                            text-left text-box">
+                            <h2>
+                              Escritórios
+                              Personalizados
+                            </h2>
+                            <h4>
+                              Intermediário
+                            </h4>
+                            <p>
+                              Encontramos o imóvel
+                              ideal, projetamos
+                              arquitetonicamente o
+                              escritório e
+                              executamos
+                              a obra necessária
+                              para adequação do
+                              espaço.
+                            </p>
+                            <div class="row">
+                              <div class="col-12
+                                mt-5 text-center
+                                mx-auto px-0">
+                                <a
+                                  href="javascript:void(0)"
+                                  class="btn-volt
+                                  w-100 v4
+                                  text-uppercase">
+                                  Conheça
+                                  todos os
+                                  benefícios
+                                </a>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-12
+                                mt-5 text-center
+                                mx-auto px-0">
+                                <a
+                                  href="javascript:void(0)"
+                                  class="btn-volt
+                                  w-100
+                                  text-uppercase">
+                                  Agende uma
+                                  Reunião
+                                </a>
+                              </div>
+                            </div>
+
+
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-10 col-md-12 mt-5
+                        botoes mx-auto
+                        text-uppercase text-center">
+                        <h5 class="title v3">
+                          Gostaria de ter uma melhor
+                          noção de valores?
+                        </h5>
+                        <div class="row">
+                          <div class="col-12 mt-5
+                            mx-auto text-center">
+                            <a
+                              href="javascript:void(0)"
+                              class="btn-simular
+                              w-100">
+                              Simular Orçamento
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </cdk-step>
+          </app-custom-stepper>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

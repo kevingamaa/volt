@@ -1,0 +1,220 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+p {
+
+  font-family: NHaasGroteskTXPro-55Rg;
+
+}
+
+
+.container-fluid{
+  background-color:  $theme-color-9;
+  overflow-y: hidden;
+
+  .col-lg-6{
+    margin-top: 13%;
+  }
+}
+
+.text-contato{
+  @include media-breakpoint-down(md) {
+    padding: 8% 8% 0 8%;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    padding: 8% 0 0 6%;
+  }
+
+  h1{
+    color:  $theme-color-1;
+    @include media-breakpoint-down(md) {
+      padding: 20% 10% 10% 0;
+      text-align: center;
+      position: relative;
+      left: -15%;
+      font-size: 1.5em;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+
+  img {
+      @include media-breakpoint-down(md) {
+        width: 20%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+    }
+  }
+
+
+
+}
+
+.elemento {
+  img {
+    position: relative;
+    /* top: 9%; */
+
+    @include media-breakpoint-down(md) {
+      bottom: 300px;
+      left: 50%;
+      width: 50%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      bottom: 290px;
+      left: 70%;
+    }
+  }
+
+}
+
+.title-contato{
+  font-family: SpaceMono-Regular ;
+  color: black;
+  @include media-breakpoint-down(md) {
+    padding-right: 15%;
+    text-transform: none;
+    font-weight: bold;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+}
+
+h6{
+  font-family: NHaasGroteskTXPro-55Rg;
+  color: #868686;
+}
+
+.enviar-msg {
+  @include media-breakpoint-down(md) {
+    text-transform: none;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    text-transform: uppercase;
+  }
+}
+// Aqui inicia o Form
+
+.card {
+  border: none;
+  background-color: #FFFFFF;
+
+  label {
+    font-family: SpaceMono-Regular;
+  }
+
+}
+
+form {
+  margin-top: 8%;
+  margin-bottom: 8%;
+
+
+  select {
+    font-family: SpaceMono-Regular;
+
+  }
+
+  &::placeholder {
+    font-family: SpaceMono-Regular;
+
+
+  }
+}
+
+.icons {
+  width: 18%;
+}
+
+.icons2 {
+  width: 22%;
+}
+
+.form-control {
+  height: 25px;
+  border: 0 0 0 12px;
+  border-bottom-color: black;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-right-color: #FFFFFF;
+}
+
+.form-group {
+  font-family: SpaceMono;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+#exampleFormControlSelect1 {
+  height: 33px;
+}
+
+#mensagem {
+  text-align: left;
+  overflow: hidden;
+}
+
+.btn {
+  font-family: NHaasGroteskTXPro-75Bd;
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 100%;
+  height: 51px;
+  text-transform: uppercase;
+  background-color: #354E8F;
+  border-radius: 28px;
+}
+
+.desktop {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+.mobile {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.circulo {
+  border: 4px solid $theme-color-11;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  @include media-breakpoint-down(md) {
+    border: 4px solid $theme-color-11;
+    border-bottom: none;
+    width: 300px;
+    height: 150px;
+    border-radius: 150px 150px 0px 0px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 61%;
+    top: 50%;
+    display: block;
+    transform: rotate(-90deg);
+
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    width: 43%;
+    height: 55%;
+    left: -18%;
+    top: 5%;
+  }
+
+}

@@ -1,0 +1,168 @@
+ <div class="container-fluid">
+    <div class="row capa">
+        <div class="col-lg-5 col-md-12 order-lg-first">
+            <div class="capa-text mx-auto">
+                <h1 class="title">
+                    Escritórios
+                    personalizados
+                    para empresas
+                    com propósito.
+
+                </h1>
+                <div class="mt-5">
+                    <a href="javascript:void(0)" routerLinkActive='active' routerLink='/nos' class="btn-volt mt-5">
+                        Conheça nossas Soluções
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12 text-center mx-auto order-first">
+            <div class="capa">
+                <img class="desk" src="./assets/photos/capa-home.png" alt="volt-capa">
+                <img class="mob" src="./assets/photos/capa-home-mobile.png" alt="volt-capa">
+            </div>
+
+            <div class="box-outline">
+
+            </div>
+            <div class="elemento">
+                <img src="./assets/icons/elemento-home.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-lg-12 text-center mx-auto solucoes">
+            <h2 class="title">
+                Nossas Soluções
+            </h2>
+            <div class="row mt-5">
+                <div class="col-lg-6 col-md-12 mx-auto text-center">
+                    <div class="cards-post mx-auto" routerLinkActive='active' routerLink='/escritorios-personalizados'>
+                        <div class="header-image-post border-0" style="background-image:
+              url('./assets/photos/escritorios-personalizados-volt.png');">
+                        </div>
+                        <div class="card-post">
+                            <h3>Escritórios Personalizados</h3>
+                            <p>Desde a busca pelo imóvel, projeto de arquitetura,
+                                execução da obra até a gestão dos serviços diários.
+                                Uma solução completa para o seu escritório. </p>
+                            <a href="javascript:void(0)" routerLinkActive='active'
+                                routerLink='/escritorios-personalizados' class="btn-volt v1 px-0">
+                                Saiba mais <img src="./assets/icons/arrow-button-blue.svg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mx-auto text-center cp2">
+                    <div class="cards-post mx-auto" routerLinkActive='active' routerLink='/coworking'>
+                        <div class="header-image-post border-0" style="background-image:
+              url('./assets/photos/coworking-volt.png');">
+                        </div>
+                        <div class="card-post">
+                            <h3>Coworking</h3>
+                            <p>Um ambiente moderno e dinâmico para empresas
+                                buscando networking e estrutura de trabalho. </p>
+
+                            <a href="javascript:void(0)" routerLinkActive='active' routerLink='/coworking'
+                                class="btn-volt v1 px-0">
+                                Saiba mais <img src="./assets/icons/arrow-button-blue.svg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <app-banner></app-banner>
+</div>
+
+<div class="container-fluid">
+    <div id="carousel-historias" class="carousel slide" data-ride="carousel">
+        <div class="row mt-5 mx-0">
+            <div class="col-lg-4 historia">
+                <span>
+                    <img src="./assets/icons/history.svg" alt="">
+                </span>
+                <h2 class="title">
+                    Histórias
+                    que marcaram
+                </h2>
+                <div>
+                    <a href="javascript:void(0)" class="btn-volt v1 px-0 ">
+                        Saiba mais <img src="./assets/icons/arrow-button-blue.svg" alt="">
+                    </a>
+                </div>
+                <div class="box-brow">
+                    <img [src]="activeHistoria.logo" alt="rappi-logo">
+                    <h6 class="text-light">{{ activeHistoria.name }}</h6>
+                    <h6 style="color: #838383 ;">{{ activeHistoria.title }}</h6>
+                    <p class="text-light"> {{ activeHistoria.description }} </p>
+                </div>
+            </div>
+            <div class="col-lg-8  col-md-12 text-center">
+
+                <ngx-slick-carousel class="carousel"
+                #slickModal="slick-carousel"
+                [config]="historiaConfig"
+                (init)="slickInit($event)"
+                (breakpoint)="breakpoint($event)"
+                (afterChange)="afterChange($event)"
+                (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem *ngFor="let historia of historias; let idx = index" class="slide"
+                        (click)="clicouNoSlide(historia)">
+                        <img [src]="historia.image" alt="escritorio">
+                    </div>
+                </ngx-slick-carousel>
+                <div class="col-lg-2 col-md-1 setas">
+                    <a (click)="slickModal.slickPrev()">
+                        <img class="seta" src="./assets/icons/arrow-left-white.svg" alt="seta">
+                    </a>
+                    <a (click)="slickModal.slickNext()">
+                        <img class="setad" src="./assets/icons/arrow-right-white.svg" alt="seta">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row all mb-5">
+
+        <div class="col-lg-7 col-md-10 text-right photo">
+            <div class="box-amarelo">
+
+            </div>
+            <div class="box-outline v2">
+
+            </div>
+            <img src="./assets/photos/all-work-volt.png" alt="all-work-volt">
+        </div>
+
+        <div class="col-lg-5 col-md-10 all-text">
+            <h2 class="title">
+                All work. All play.
+            </h2>
+            <p>
+                No VOLT acreditamos que o ambiente de trabalho
+                é uma ferramenta fundamental para a inovação. Traduzimos a cultura da
+                sua empresa em espaços imaginados para o futuro.
+            </p>
+            <div class="">
+
+            </div>
+            <a href="javascript:void(0)" routerLinkActive='active' routerLink='/nos' class="btn-volt v1 px-0">
+                Conheça mais <img src="./assets/icons/arrow-button-blue.svg" alt="">
+            </a>
+
+        </div>
+    </div>
+</div>

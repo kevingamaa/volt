@@ -1,0 +1,255 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+.container-fluid{
+  overflow-y: hidden;
+}
+
+p {
+
+  font-family: NHaasGroteskTXPro-55Rg;
+
+}
+
+.cover-nos {
+
+  @include media-breakpoint-down(md) {
+    min-height: 95vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    min-height: 60vh;
+  }
+
+  .box-white {
+    background-color: white;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      padding: 10%;
+      margin-top: 90%;
+      margin-left: 0;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      padding: 40px 20px;
+      margin-top: 30%;
+      margin-left: 5%;
+    }
+
+    h1 {
+      @include media-breakpoint-down(md) {
+        font-size: 1.9em;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {
+      }
+    }
+
+    P{
+      color: #868686;
+      letter-spacing: 1px;
+    }
+
+  }
+}
+.valores {
+  padding-top: 5%;
+}
+.decoration {
+  height: 400px;
+  width: 300px;
+  background-color: $theme-color-7;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+
+      @include media-breakpoint-down(md) {
+        top: -30%;
+        width: 65%;
+        height: 110%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {
+        top: 50%;
+      }
+
+  &.v1 {
+    left: 58%;
+    height: 460px;
+    top: -15%;
+    @include media-breakpoint-down(md) {
+      width: 50%;
+      height: 100%;
+      left: 50%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+}
+
+
+.valores-text {
+  h2 {
+    margin-top: 10%;
+
+  }
+}
+
+.equipe-text {
+  margin-top: 8%;
+}
+
+.comunidade-text {
+  @include media-breakpoint-down(md) {
+    padding: 10%  0;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    padding: 40px 80px;
+  }
+
+  span {
+    background-color: $theme-color-3;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-family:SpaceMono-Regular;
+    color: white;
+    font-style: 0.2em;
+  }
+}
+.teste {
+  overflow: hidden;
+}
+.stories {
+  .stories-content{
+    padding: 5%;
+    @include media-breakpoint-down(md) {
+      padding: 20% 7% 80% 7%;
+      height: 70%;
+      position: relative;
+      top: -10%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+    }
+  }
+
+
+  @include media-breakpoint-down(md) {
+    height: 80vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    min-height: 100vh;
+  }
+
+
+  h6{
+    font-family: NHaasGroteskTXPro-55Rg;
+  }
+  h4{
+    font-family: P22MackinacPro-ExtraBold;
+    @include media-breakpoint-down(md) {
+      padding: 10% 0;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+  .name{
+    font-family: NHaasGroteskTXPro-75Bd;
+  }
+}
+.setas {
+  position: relative;
+  top: 40%;
+  a{
+    cursor: pointer;
+  }
+  img {
+    @include media-breakpoint-down(md) {
+      width: 15%;
+      position: absolute;
+      top: -400%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      width: 8%;
+      top: 50%;
+    }
+  }
+  .seta-um{
+    position: relative;
+    @include media-breakpoint-down(md) {
+      top: -220px;
+      left: 85%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      left: 3%;
+    }
+
+  }
+}
+img {
+  @include media-breakpoint-down(md) {
+    width: 95%;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+}
+
+.txt-volt-stories {
+  padding: 5% 30% 5% 0;
+  font-size: 2.0em;
+}
+
+.mobile {
+  @include media-breakpoint-down(md) {
+    text-transform: uppercase;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+
+  }
+}
+.card-post{
+  img {
+    @include media-breakpoint-down(md) {
+      width: 10%;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+}
+
+.solucoes {
+  @include media-breakpoint-down(md) {
+    margin-top: 50%;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+  }
+
+}
+
+.card-img-stories {
+  padding: 0;
+  margin: 0;
+}
+.img-stories {
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    height: 50vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    width: 110%;
+    height: 100vh;
+  }
+
+}

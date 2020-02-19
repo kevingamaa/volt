@@ -1,0 +1,110 @@
+<div class="paralax-scroll" (scroll)="onscroll($event)">
+  <div class="cover-cases bg-default" style="background-image:
+    url('./assets/backgrounds/bg-cases.png');" [ngClass]="{'mobile':
+    helper.isMobile}">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 px-0">
+          <div class="box-white transition-smoth" *ngIf="scrollCount <500"
+            [ngStyle]="{
+            'transform': 'translateX('+scrollCount/15+'vw)'
+            }">
+            <h1 class="title">Cases</h1>
+            <p>
+              Traduzimos nossa paixão em ajudar nossos clientes por meio dos
+              nossos
+              projetos. Veja abaixo algumas histórias de sucesso…
+            </p>
+          </div>
+          <ng-container *ngIf="scrollCount >= 500 ">
+            <ngx-slick-carousel class="cases-carousel"
+              #slickModal="slick-carousel" [config]="slideConfig"
+              (init)="slickInit($event)"
+              (breakpoint)="breakpoint($event)"
+              (afterChange)="afterChange($event)"
+              (beforeChange)="beforeChange($event)">
+              <div ngxSlickItem *ngFor="let case of cases; let idx= index"
+                class="case" [ngClass]="{'mobile': helper.isMobile}">
+
+                <div class="case-prev" *ngIf="!helper.isMobile">
+                  <div class="case-author">
+                    <span class="text-uppercase w-100 avatar-info"
+                      *ngIf="cases[idx - 1]">
+                      <img class="w-25" [src]="cases[idx - 1].images[0].url"
+                        alt="" class="case-img">
+                      <span class="ml-3 mt-2">
+                        <h6 class="text-white">{{ cases[idx - 1].title }}</h6>
+                        <h6 class="text-muted">{{ cases[idx - 1].subtitle }}</h6>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="case-item">
+                  <p [innerHTML]="case.description" class="case-description
+                    text-left">
+
+                  </p>
+                  <div class="case-author">
+                    <span class="text-uppercase w-100 avatar-info">
+                      <img class="w-25" [src]="case.images[0].url" alt=""
+                        class="case-img">
+                      <span class="ml-3 mt-2">
+                        <h6 class="">{{ case.title }}</h6>
+                        <h6 class="text-muted">{{ case.subtitle }}</h6>
+                      </span>
+                    </span>
+                    <div class="mt-4">
+                      <a href="javascript:void(0)" routerLink="/cases/case"
+                        class="btn btn-volt-outline btn-volt btn-block
+                        rounded-pill text-left py-2 pl-3">
+                        Ver case
+                        <img src="./assets/icons/arrow-button-blue.svg" alt=""
+                          class="d-inline">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="case-prev"*ngIf="!helper.isMobile">
+                  <div class="case-author">
+                    <span class="text-uppercase w-100 avatar-info"
+                      *ngIf="cases[idx + 1]">
+                      <img class="w-25" [src]="cases[idx + 1].images[0].url"
+                        alt="" class="case-img">
+                      <span class="ml-3 mt-2">
+                        <h6 class="text-white">{{ cases[idx + 1].title }}</h6>
+                        <h6 class="text-muted">{{ cases[idx + 1].subtitle }}</h6>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ngx-slick-carousel>
+            <div class="arrows" [ngClass]="{'mobile': helper.isMobile}">
+              <a href="javascript:void(0)" class="left-arrow"(click)="slickModal.slickPrev()">
+                <img src="./assets/icons/arrow-coworking-left.svg" alt="">
+              </a>
+              <a href="javascript:void(0)" class="right-arrow"
+                (click)="slickModal.slickNext();">
+                <img src="./assets/icons/arrow-coworking-right.svg" alt="">
+              </a>
+            </div>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-paralax">
+
+  </div>
+</div>
+<div class="container-fluid bg-white">
+  <div class="row">
+    <div class="col-lg-11 col-md-11 mx-auto">
+      <div class="banner">
+        <app-banner [classes]="'mt-1'"></app-banner>
+      </div>
+    </div>
+  </div>
+</div>

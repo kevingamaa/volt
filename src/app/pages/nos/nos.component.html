@@ -1,0 +1,223 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 bg-default cover-nos" style="background-image:
+      url('./assets/backgrounds/bg-nos.png');">
+      <div class="box-white">
+        <h1 class="title">Somos VOLT</h1>
+        <p>
+          Fornecemos uma visão completa do seu espaço de trabalho, participando
+          de todo o processo de idealização do imóvel até a gestão do seu
+          empreendimento. Através de processos claros e definidos, executamos um
+          serviço que busca construir comunidades de trabalho de maneira
+          colaborativa, oferecendo segurança e ferramentas para o seu negócio.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-beje">
+  <div class="row mt-5">
+    <div class="col-lg-7 col-md-12 text-center">
+      <div class="desktop">
+        <img src="./assets/photos/nosso-proposito-volt.png" alt="">
+      </div>
+      <div class="mobile">
+        <img src="./assets/photos/nosso-proposito-volt-mobile.png" alt="">
+      </div>
+      <div class="decoration desktop">
+
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-12 text-right">
+      <div class="box-amarelo v1 text-left">
+        <h2 class="title desktop">Nosso Propósito</h2>
+        <h2 class="title mobile">Nosso Porque</h2>
+        <p>
+          Acreditamos num mundo onde a produtividade das pessoas esteja alinhada
+          com sua essência. Onde pessoas buscam seus objetivos, cumprindo seus
+          papeis no mundo e se divertindo no caminho. Sempre atuando com ética,
+          unindo a tradição à inovação, promovendo autenticidade e ferramentas
+          para nossos parceiros.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-beje">
+  <div class="row mt-5 valores">
+    <div class="col-lg-6 col-md-12 text-center">
+      <div>
+        <img src="./assets/photos/nossos-valores-volt.png" alt="">
+      </div>
+      <div class="decoration mobile">
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 text-left valores-text">
+      <h2 class="title desktop">Nossos Valores</h2>
+      <h2 class="title mobile">imersão</h2>
+      <p>
+        No Volt buscamos mais do que apenas desenvolver espaços de trabalho.
+        Imergimos no processo como um todo para oferecer sempre uma solução
+        condizente com as visões
+        dos nossos parceiros.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-beje teste">
+  <div class="row mt-5">
+    <div class="col-lg-6 col-md-12 order-lg-first">
+      <div class="comunidade-text">
+        <span class="text-uppercase">
+          Em breve
+        </span>
+        <h2 class="title mt-3">Comunidade VOLT</h2>
+        <p>
+          Através do nosso sistema próprio, oferecemos para os nossos parceiros
+          a gestão completa do seu projeto de maneira 100% digital.
+          Possibilitando o acesso à etapas, informações de obra, solicitações de
+          serviços entre outros…
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 order-first">
+      <div>
+        <img src="./assets/photos/comuidade-volt.png" alt="">
+      </div>
+      <div class="decoration v1 text-left desktop">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg-beje">
+  <div class="row my-5">
+    <div class="col-lg-6 col-md-12 text-center">
+      <div>
+        <img src="./assets/photos/equipe-volt.png" alt="">
+      </div>
+      <div class="decoration v1 text-left mobile">
+
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 equipe-text">
+      <h2 class="title mt-3">Equipe Diversificada</h2>
+      <p>
+        Acreditamos que a diversificação é a chave do sucesso.
+        Para isso contamos com uma equipe qualificada de
+        diferentes nichos com diferentes histórias. Unimos a criatividade da
+        inovação com a eficiência da tradição.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid storie">
+  <div class="row stories">
+    <div class="col-lg-6 col-md-12 bg-default card-img-stories">
+      <ngx-slick-carousel class="carousel"
+                #slickModal="slick-carousel"
+                [config]="storieConfig"
+                (init)="slickInit($event)"
+                (breakpoint)="breakpoint($event)"
+                (afterChange)="afterChange($event)"
+                (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem *ngFor="let storie of stories; let idx = index" class="slide"
+                        (click)="clicouNoSlide(storie)">
+                        <img class="img-stories" [src]="storie.image" alt="photo">
+                        <div class="setas mobile">
+                          <a (click)="slickModal.slickPrev()" class="px-0">
+                            <img src="./assets/icons/arrow-left.svg" alt="">
+                          </a>
+                          <a (click)="slickModal.slickNext()" class="px-0">
+                            <img class="seta-um" src="./assets/icons/arrow-right.svg" alt="">
+                          </a>
+                        </div>
+                    </div>
+      </ngx-slick-carousel>
+    </div>
+    <div class="col-lg-6 col-md-12 stories-content" style="background-color: #D2E6DB;">
+      <div id="carousel-nos" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h3 class="title">{{ activeStorie.title }}</h3>
+              <h4 class="txt-volt-stories">
+                {{ activeStorie.description }}
+              </h4>
+              <div>
+                <h6 class="name">{{ activeStorie.name }}</h6>
+                <h6>{{ activeStorie.carg }}</h6>
+              </div>
+            </div>
+        </div>
+        <div class="setas desktop">
+          <a (click)="slickModal.slickPrev()">
+            <img src="./assets/icons/arrow-left.svg" alt="">
+          </a>
+          <a (click)="slickModal.slickNext()">
+            <img class="seta-um" src="./assets/icons/arrow-right.svg" alt="">
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-lg-12 text-center mx-auto solucoes">
+      <h2 class="title">
+        Nossas Soluções
+      </h2>
+      <div class="row mt-5">
+        <div class="col-lg-6 col-md-12 mx-auto text-center">
+          <div class="cards-post mx-auto" routerLinkActive='active'
+            routerLink='/escritorios-personalizados'>
+            <div class="header-image-post border-0"
+              style="background-image:
+              url('./assets/photos/escritorios-personalizados-volt.png');">
+            </div>
+            <div class="card-post">
+              <h3>Escritórios Personalizados</h3>
+              <p>Desde a busca pelo imóvel, projeto de arquitetura,
+                execução da obra até a gestão dos serviços diários.
+                Uma solução completa para o seu escritório. </p>
+              <a href="javascript:void(0)" routerLinkActive='active'
+              routerLink='/escritorios-personalizados' class="btn-volt v1 px-0">
+                Saiba mais <img src="./assets/icons/arrow-button-blue.svg"
+                  alt="">
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 mx-auto text-center cp2">
+          <div class="cards-post mx-auto" routerLinkActive='active'
+            routerLink='/coworking'>
+            <div class="header-image-post border-0"
+              style="background-image:
+              url('./assets/photos/coworking-volt.png');">
+            </div>
+            <div class="card-post">
+              <h3>Coworking</h3>
+              <p>Um ambiente moderno e dinâmico para empresas
+                buscando networking e estrutura de trabalho. </p>
+              <a href="javascript:void(0)" routerLinkActive='active'
+              routerLink='/coworking' class="btn-volt v1 px-0">
+                Saiba mais <img src="./assets/icons/arrow-button-blue.svg"
+                  alt="">
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="col-lg-10 mx-auto text-center down bg-beje">
+    <app-form></app-form>
+  </div>
+
+</div>
+

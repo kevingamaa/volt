@@ -1,0 +1,322 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+p {
+
+  font-family: NHaasGroteskTXPro-55Rg;
+
+
+}
+
+.cover-coworking{
+
+  @include media-breakpoint-down(md) {
+    min-height: 90vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    min-height: 100vh;
+  }
+  .infos{
+
+    P{
+      font-size: 1em;
+      line-height: 2em;
+    }
+    h1, p{
+      color: white;
+
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {
+        width: 55%;
+      }
+    }
+
+
+    @include media-breakpoint-down(md) {
+      padding: 20px 5%;
+      margin-top: 95%;
+      margin-left: 0;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      padding: 20px;
+      margin-top: 25%;
+      margin-left: 5%;
+    }
+  }
+}
+
+.estrutura{
+  @include media-breakpoint-down(md) {
+    height: 200vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
+  
+}
+
+
+.espaco{
+  padding: 10% 0 10% 10%;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  p{
+    margin-top: 5%;
+  font-size: 0.9em;
+
+  }
+  img {
+    @include media-breakpoint-down(md) {
+      position: relative;
+      left: 40%;
+      display: flex;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {}
+  }
+
+  &.v1 {
+    padding: 5% 0 10% 10%;
+  }
+
+}
+
+.card-espaco {
+  img {
+    @include media-breakpoint-down(md) {
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      width: 45%;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+  }
+  .img-end {
+    @include media-breakpoint-down(md) {
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      width: 25%;
+      margin-left: 10%;
+    }
+  }
+}
+
+.photo{
+  margin-top: 10%;
+  margin-left: 40%;
+
+    img {
+      @include media-breakpoint-down(md) {
+        margin-left: -90%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+     }
+     .img-ev {
+      @include media-breakpoint-down(md) {
+        width: 190%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+     }
+}
+
+.coworking-section{
+
+  @include media-breakpoint-down(md) {
+    height: 70vh;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    height: 120vh;
+  }
+
+
+  .text-coworking{
+    padding: 20% 7%;
+    h3{
+      color: white;
+      @include media-breakpoint-down(md) {
+        text-align: center;
+        padding:0 10%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+    }
+  }
+
+  .carrossel{
+
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      padding-top: 10%;
+    }
+
+    img {
+      @include media-breakpoint-down(md) {
+        height: 30vh;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {}
+    }
+
+    p{
+      width: 50%;
+      color: white;
+
+      @include media-breakpoint-down(md) {
+        width: 90%;
+      }
+      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(lg) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.carousel-indicators {
+  li {
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+  }
+}
+.indicadores {
+  position: absolute;
+  top: 99%;
+  left: 0;
+}
+
+.title {
+  &.v5 {
+    @include media-breakpoint-down(md) {
+      font-size: 2.0em;
+     }
+     @include media-breakpoint-up(md) {}
+     @include media-breakpoint-up(lg) {}
+  }
+}
+.card-serv {
+  @include media-breakpoint-down(md) {
+    position: relative;
+    top: -600px;
+   }
+   @include media-breakpoint-up(md) {}
+   @include media-breakpoint-up(lg) {}
+}
+.serv-img{
+  @include media-breakpoint-down(md) {
+    height: 50vh;
+   }
+   @include media-breakpoint-up(md) {}
+   @include media-breakpoint-up(lg) {}
+}
+
+  
+.servico{
+  @include media-breakpoint-down(md) {
+    height: 140vh;
+   }
+   @include media-breakpoint-up(md) {}
+   @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
+   }
+  
+
+#servicosToggle {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+  /* Checkbox Hack */ 
+#toggle-1 {
+  display:none;
+}
+#toggle-2 {
+  display:none;
+}
+#toggle-3 {
+  display:none;
+}
+#toggle-4 {
+  display:none;
+}
+
+label { 
+ -webkit-appearance: push-button;
+ -moz-appearance: button; 
+ display: inline-block;
+ cursor: pointer;
+ border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 10%;
+  text-align: center;
+  padding-top: 3%;
+  color: white;
+ background-color: $theme-color-4;
+}
+
+/* CSS padrão da div */
+#mostra {
+  display:none;
+}
+
+/* CSS quando o checkbox está marcado */
+#toggle-1:checked ~ #mostra {
+  display:block;
+}
+#toggle-2:checked ~ #mostra {
+  display:block;
+}
+#toggle-3:checked ~ #mostra {
+  display:block;
+}
+#toggle-4:checked ~ #mostra {
+  display:block;
+}
+
+.servicos {
+  padding: 0 2%;
+  &.vo {
+    padding: 5% 0 0 2%;
+  }
+  p {
+    color: #707070;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding: 0 10% 0 0;
+  }
+  .preco {
+    color: #000000;
+  }
+}
+.btn-volt {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  padding: 1% 1.5%;
+  position: relative;
+  top: -45px;
+  left: 20%;
+}

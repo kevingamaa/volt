@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col md-12 text-contato">
+      <h1 class="title">
+        <img src="./assets/icons/sun.svg" alt="">
+        Fale com a gente!
+      </h1>
+      <div class="mt-3">
+        <h6 class="title-contato desktop">Você pode ligar ou mandar um whatsapp</h6>
+        <h6 class="title-contato mobile">Você pode ligar pra gente ou mandar um whatsapp para:</h6>
+        
+        <h6>(11) 2348-5700</h6>
+      </div>
+      <div class="mt-3">
+        <h6 class="title-contato">Mandar um email</h6>
+        <h6>contato@voltcoworking.com.br</h6>
+      </div>
+      <div class="elemento">
+        <img src="./assets/icons/elemento-contato.svg" alt="">
+      </div>
+       <div class="circulo"></div> 
+    </div>
+    <div class="col-lg-6 col md-12 form">
+      <div class="row">
+        <div class="col-lg-10 col-md-12">
+          <h6 class="title-contato enviar-msg">...ou enviar uma mensagem: </h6>
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12 m-auto">
+                        <form method="POST" action="send.php" enctype="application/x-www-form-urlencoded" id="contact-for">
+                            <div class="form-group">
+                                <label>
+                                    <img  class="icons" src="./assets/icons/assunto.svg" alt="assunto">
+                                    Assunto
+                                </label>
+                                <select name="tema" class="form-control" id="exampleFormControlSelect1" >
+                                    <option value="escritórios-personalizados">Escritórios Personalizados</option>
+                                    <option value="coworking">Coworking</option>
+                                    <option value="time">Entrar para o Time</option>
+                                    <option value="parceria">Quero ser um Parceiro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <img class="icons2" src="./assets/icons/nome.svg" alt="nome">
+                                    Nome
+                                </label>
+                                <input type="text" name="nome" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <img class="icons" src="./assets/icons/empresa.svg" alt="empresa">
+                                    Empresa
+                                </label>
+                                <input type="text" name="empresa" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <img class="icons2" src="./assets/icons/email.svg" alt="email">
+                                    Email
+                                </label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <img class="icons" src="./assets/icons/telefone.svg" alt="telefone">
+                                    Telefone
+                                </label>
+                                <input type="text" name="telefone" class="form-control"  required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">
+                                    <img class="icons" src="./assets/icons/mensagem.svg" alt="">
+                                    Mensagem
+                                </label>
+                                <textarea id="mensagem" name="mensagem" cols="30" rows="3" class="form-control" required>
+                                </textarea>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <button type="submit" class="btn-volt w-100">Enviar &rarr;</button>
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

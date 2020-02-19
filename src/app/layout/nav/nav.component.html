@@ -1,0 +1,123 @@
+<div class="container-fluid">
+  <div class="row menu">
+    <div class="col-lg-3 col-md-6">
+      <div class="logo">
+        <a href="javascript:void(0)" routerLinkActive='active'
+          routerLink='/home'>
+          <img *ngIf="helper.navType !== 'nav-color'"
+            src="./assets/logos/volt-logo.svg" alt="volt-logo">
+          <img *ngIf="helper.navType == 'nav-color'"
+            src="./assets/logos/volt-logo-white.svg" alt="volt-logo">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-3">
+      <!--menu mobile-->
+      <nav class="menu-mob mobile nav-fix" role="navigation" [ngClass]="{'nav-white':
+      helper.navType == 'nav-color' }">
+        <div id="menuToggle" >
+          <input type="checkbox" class="check"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="javascript:void(0)" (click)="closeNav()"
+              routerLinkActive='active'
+              routerLink='/home'>
+              <img class="logo-menu-m" src="./assets/logos/volt-logo-white.svg"
+                alt="volt-logo">
+            </a>
+            <a href="javascript:void(0)" (click)="closeNav()"
+              routerLinkActive='active'routerLink='/nos'>
+              <li>Nós</li> <br/>
+              </a>
+              <a href="javascript:void(0)" (click)="closeNav()"
+                routerLinkActive='active'routerLink='/escritorios-personalizados'><li>Escritórios
+                  Personalizados</li></a><br/>
+
+                <a href="javascript:void(0)" (click)="closeNav()"
+                  routerLinkActive='active'
+                  routerLink='/coworking'>
+                  <li>Coworking</li><br/>
+                  </a>
+                  <a href="javascript:void(0)" (click)="closeNav()"
+                    routerLinkActive='active'
+                    routerLink='/cases'>
+                    <li>Cases</li>
+                  </a><br/>
+                    <a href="javascript:void(0)" (click)="closeNav()"
+                      routerLinkActive='active'
+                      routerLink='/insights'>
+                      <li>Insights</li>
+                    </a><br/>
+                      <a href="javascript:void(0)" (click)="closeNav()"
+                        routerLinkActive='active'
+                        routerLink='/contato'>
+                        <li>Contato</li>
+                      </a><br/>
+                        <li>
+                          <div class="login btn-menu-mobile w-100">
+                            <a href="javascript:void(0)"
+                              routerLinkActive='active'
+                              routerLink='/auth'>
+                              Login
+                            </a>
+                          </div>
+                        </li><br/>
+                          <li>
+                            <div class="btn-menu-mobile">
+                              <a href="javascript:void(0)"
+                                routerLinkActive='active'
+                                routerLink='/simulacao' class="btn-volt vv w-100
+                                text-uppercase">
+                                Faça um Simulação
+                              </a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+
+                    <!--MENU VOLT-->
+                    <nav [ngClass]="{'nav-white': helper.navType == 'nav-color'
+                      }">
+                      <ul class="desktop">
+
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/nos'>
+                          <li>Nós</li>
+                        </a>
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/escritorios-personalizados'>
+                          <li>Escritórios Personalizados</li>
+                        </a>
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/coworking'>
+                          <li>Coworking</li>
+                        </a>
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/cases'>
+                          <li>Cases</li>
+                        </a>
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/insights'>
+                          <li>Insights</li>
+                        </a>
+                        <a href="javascript:void(0)" routerLinkActive='active'
+                          routerLink='/contato'>
+                          <li>Contato</li>
+                        </a>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col-lg-2 mx-auto">
+                    <div class="login desktop" [ngClass]="{'btn-solid':
+                      helper.navType == 'nav-color' }">
+                      <a href="javascript:void(0)" routerLinkActive='active'
+                        routerLink='/auth'>
+                        Login
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>

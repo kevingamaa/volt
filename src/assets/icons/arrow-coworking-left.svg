@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53" height="52" viewBox="0 0 53 52">
+  <g id="Grupo_97" data-name="Grupo 97" transform="translate(52.627 52.453) rotate(180)">
+    <g id="Elipse_38" data-name="Elipse 38" transform="translate(-0.373 0.453)" fill="none" stroke="#fff" stroke-width="3">
+      <ellipse cx="26.5" cy="26" rx="26.5" ry="26" stroke="none"/>
+      <ellipse cx="26.5" cy="26" rx="25" ry="24.5" fill="none"/>
+    </g>
+    <g id="arrow-pointing-to-right" transform="translate(15.039 19.249)">
+      <path id="Caminho_28" data-name="Caminho 28" d="M22.217,7.009l-6.7-6.7a1.047,1.047,0,1,0-1.481,1.481L18.948,6.7H1.047a1.047,1.047,0,0,0,0,2.095h17.9l-4.915,4.915a1.047,1.047,0,0,0,1.481,1.481l6.7-6.7A1.047,1.047,0,0,0,22.217,7.009Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

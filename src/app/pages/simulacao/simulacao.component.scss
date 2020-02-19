@@ -1,0 +1,142 @@
+@import 'helpers';
+@import 'variables';
+@import 'components';
+
+
+.container-fluid {
+  background-color: #EDE9E7;
+  min-height: 100vh;
+
+.simulacao{
+  padding: 5% 0;
+  h1{
+    font-size: 3.5em;
+    color: $theme-color-3;
+  }
+  h3{
+    font-size: 2em;
+
+  }
+
+  .arrow-back {
+    position: relative;
+    top: 125px;
+    left: 125px;
+
+    transform: scale(1);
+    transition: all (1s);
+
+    &:hover {
+      transform: scale(1.07);
+      transition: all (500ms);
+    }
+
+    a {
+      font-family: NHaasGroteskTXPro-75Bd;
+      color: $theme-color-3;
+      letter-spacing: 2px;
+      text-decoration: none;
+      img {
+        margin: 0 10px;
+      }
+    }
+
+
+  }
+
+  .choices{
+
+    a{
+
+      padding: 20px 70px;
+      border: 1px solid $theme-color-3;
+      border-radius: 40px;
+      font-family:NHaasGroteskTXPro-75Bd;
+
+      color: $theme-color-3 ;
+      text-decoration: none;
+      &:hover{
+        color:  $theme-color-9 ;
+        background-color:$theme-color-3 ;
+
+      }
+      &.v1{
+        @include media-breakpoint-down(md) {
+          padding: 5%;
+
+        }
+        @include media-breakpoint-up(md) {}
+        @include media-breakpoint-up(lg) {
+          padding: 20px 180px;
+
+        }
+
+      }
+    }
+
+  }
+
+}
+
+
+
+}
+
+.desktop {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.escritorios{
+  position: relative;
+  margin: 0 0 10% 0;
+  top: 100px;
+  h2{
+    font-family:SpaceMono-Regular;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.2em;
+      word-spacing: 1px;
+      letter-spacing: 1px;
+    }
+    @include media-breakpoint-up(md) {}
+    @include media-breakpoint-up(lg) {
+      font-size: 2.2em;
+      word-spacing: 6px;
+      letter-spacing: 4px;
+    }
+  }
+
+  h4{
+   font-family:P22MackinacPro-ExtraBold ;
+  }
+
+  .text-green{
+    h2, h4{
+      color: $theme-color-11;
+
+    }
+    p{
+      font-family: NHaasGroteskTXPro-55Rg;
+    }
+  }
+
+
+  .text-box{
+    padding: 10% 5%;
+    background-color: white;
+
+  }
+}
+
+.botoes{
+  a{
+    margin-top: 100px;
+  }
+}
+
