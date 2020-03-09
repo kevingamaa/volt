@@ -143,11 +143,17 @@ p {
   border-radius: 100%;
   width: 8px;
   height: 8px;
+  
   @include media-breakpoint-down(md) {
   }
   @include media-breakpoint-up(md) {}
-  @include media-breakpoint-up(lg) {
-  }
+  @include media-breakpoint-up(lg) {}
+}
+
+.indicadores {
+  position: absolute;
+  top: 99%;
+  left: -10%;
 }
 
 .mobile {
@@ -170,7 +176,11 @@ p {
     display: block;
   }
 }
-
+.carrossel{
+  p {
+    color:  $theme-color-9;
+  }
+}
 .scroll {
   height: 100vh;
   overflow-y: scroll;

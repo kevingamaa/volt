@@ -83,14 +83,16 @@ nav {
     border: 2px solid $theme-color-1;
     border-radius: 30px;
     color: $theme-color-1;
-    padding: 10px 40px;
+    // padding: 10px 40px;
+    padding: 15px;
     text-decoration: none;
     font-family: NHaasGroteskTXPro-75Bd;
     font-size: 1em;
     letter-spacing: 1px;
     @include media-breakpoint-down(md) {
       border: 2px solid  $theme-color-9;
-      padding: 15px 120px;
+      // padding: 15px 120px;
+      padding: 12px;
       font-size: 0.7em;
     }
     @include media-breakpoint-up(md) {}

@@ -5,7 +5,7 @@
 // APP
 
 .get-in {
- 
+
   background-color:  $theme-color-9;
   p {
     color: $theme-color-3;
@@ -15,14 +15,15 @@
     text-align: left;
     position: relative;
     @include media-breakpoint-down(md) {
-      
+
       top: 2%;
       left: 40%;
       width: 50%;
     }
     @include media-breakpoint-up(md) {}
     @include media-breakpoint-up(lg) {
-      margin-top: -5%;
+      // margin-top: -5%;
+      top: 100px;
       left: 40%;
     }
 
@@ -47,14 +48,14 @@
 
   .elemento {
     position: relative;
-    
+
       @include media-breakpoint-down(md) {
         top: -30%;
         right: 60%;
       }
       @include media-breakpoint-up(md) {}
       @include media-breakpoint-up(lg) {
-        top: 15%;
+        top: 190px;
         right: 20%;
       }
 
@@ -65,7 +66,7 @@
       @include media-breakpoint-up(md) {}
       @include media-breakpoint-up(lg) {}
     }
-    
+
   }
 
   .sun {
@@ -78,7 +79,7 @@
       }
       @include media-breakpoint-up(md) {}
       @include media-breakpoint-up(lg) {
-        top: 40px;
+        top: 160px;
         right: 18%;}
 
     }
@@ -131,11 +132,14 @@ form {
 
 .form-control {
   height: 25px;
-  border: 0 0 0 12px;
-  border-bottom-color: black;
-  border-top-color: #FFFFFF;
-  border-left-color: #FFFFFF;
-  border-right-color: #FFFFFF;
+  border: none;
+  border-block-end: 1px solid black;
+  // border-top-color: #FFFFFF;
+  // border-left-color: #FFFFFF;
+  // border-right-color: #FFFFFF;
+  // outline: 0;
+  // border: 0 0 0 20px;
+  // border-bottom-color:black !important;
 }
 
 .form-group {
@@ -169,19 +173,20 @@ form {
     border: 4px solid $theme-color-11;
     border-bottom: none;
     background-repeat: no-repeat;
-    position: relative;
-    left: 67%;
-    top: 25%;
+    position: absolute;
     display: block;
     transform: rotate(-90deg);
     @include media-breakpoint-down(md) {
-    left: 72%;
+    right: -37px;
+    top: 50px;
     width: 150px;
     height: 75px;
     border-radius: 150px 150px 0px 0px;
     }
     @include media-breakpoint-up(md) {}
-    @include media-breakpoint-up(lg) {      
+    @include media-breakpoint-up(lg) {
+    right: -62px;
+    top: 140px;
     width: 250px;
     height: 125px;
     border-radius: 150px 150px 0px 0px;

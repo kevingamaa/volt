@@ -26,7 +26,7 @@
               <div ngxSlickItem *ngFor="let case of cases; let idx= index"
                 class="case" [ngClass]="{'mobile': helper.isMobile}">
 
-                <div class="case-prev" *ngIf="!helper.isMobile">
+                <div class="case-prev"*ngIf="!helper.isMobile">
                   <div class="case-author">
                     <span class="text-uppercase w-100 avatar-info"
                       *ngIf="cases[idx - 1]">
@@ -99,7 +99,7 @@
 
   </div>
 </div>
-<div class="container-fluid bg-white">
+<!-- <div class="container-fluid bg-white">
   <div class="row">
     <div class="col-lg-11 col-md-11 mx-auto">
       <div class="banner">
@@ -107,4 +107,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

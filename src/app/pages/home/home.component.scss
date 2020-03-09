@@ -53,8 +53,9 @@
   @include media-breakpoint-down(md) {
     height     : 390px;
     width      : 90%;
-    margin-top : -120%;
-    margin-left: 5%;
+    position: relative;
+    top: -415px;
+    left: 30px;
   }
 
   @include media-breakpoint-up(md) {}
@@ -62,9 +63,14 @@
   @include media-breakpoint-up(lg) {
     height     : 500px;
     width      : 530px;
-    margin-top : -54%;
-    margin-left: 9.5%;
+    position: relative;
+    top: -440px;
+    left: 72px;
   }
+  @media only screen and (min-width: 1600px) {
+    top: -445px;
+    left: 240px;
+   }
 
   &.v2 {
     position: absolute;
@@ -80,11 +86,15 @@
     @include media-breakpoint-up(md) {}
 
     @include media-breakpoint-up(lg) {
-      margin-top : 5%;
-      margin-left: 13%;
+      margin-top: 480px;
+      margin-left: 70px;
       height     : 680px;
       width      : 422px;
     }
+    @media only screen and (min-width: 1600px) {
+      margin-top: 480px;
+      margin-left: -60px;
+     }
   }
 }
 
@@ -93,16 +103,18 @@
     position: relative;
 
     @include media-breakpoint-down(md) {
-      margin-top : -170%;
-      margin-left: 60%;
-      width      : 40%;
+      top: -715px;
+    left: 100px;
+    width: 42%;
+    position: relative;
     }
 
     @include media-breakpoint-up(md) {}
 
     @include media-breakpoint-up(lg) {
-      margin-top : -120%;
-      margin-left: -80%;
+      position: relative;
+      top: -890px;
+      left: -345px;
     }
   }
 
@@ -200,7 +212,8 @@
       @include media-breakpoint-up(md) {}
 
       @include media-breakpoint-up(lg) {
-        left: -15%;
+        top: -40px;
+        left: -400px;
       }
     }
   }
@@ -221,7 +234,10 @@
     @include media-breakpoint-up(lg) {
       width: 80%;
     }
-
+    @media only screen and (min-width: 1600px) {
+      top: -30px;
+      left: -350px;
+     }
     p {
       color: #767676;
     }

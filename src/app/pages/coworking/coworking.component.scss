@@ -55,13 +55,13 @@ p {
 
 .estrutura{
   @include media-breakpoint-down(md) {
-    height: 200vh;
+    // height: 200vh;
   }
   @include media-breakpoint-up(md) {}
   @include media-breakpoint-up(lg) {
     height: 100vh;
   }
-  
+
 }
 
 
@@ -231,7 +231,7 @@ p {
    @include media-breakpoint-up(lg) {}
 }
 
-  
+
 .servico{
   @include media-breakpoint-down(md) {
     height: 140vh;
@@ -241,14 +241,14 @@ p {
     height: 100vh;
   }
    }
-  
+
 
 #servicosToggle {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-  /* Checkbox Hack */ 
+  /* Checkbox Hack */
 #toggle-1 {
   display:none;
 }
@@ -262,9 +262,9 @@ p {
   display:none;
 }
 
-label { 
+label {
  -webkit-appearance: push-button;
- -moz-appearance: button; 
+ -moz-appearance: button;
  display: inline-block;
  cursor: pointer;
  border-radius: 100%;
@@ -319,4 +319,16 @@ label {
   position: relative;
   top: -45px;
   left: 20%;
+}
+
+.espaco-1{
+  @include media-breakpoint-down(md) {
+    padding: 150px;;
+
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {
+    // width:80%;
+
+  }
 }

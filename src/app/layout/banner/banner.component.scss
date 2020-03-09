@@ -15,6 +15,7 @@
 
     @include media-breakpoint-up(lg) {
         min-height: 55vh;
+        max-width: 1330px;
     }
 
     h6 {

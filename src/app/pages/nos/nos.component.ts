@@ -11,23 +11,31 @@ export class NosComponent implements OnInit, OnDestroy {
   public stories: any[] = [
     {
       id: 1,
-      image: './assets/photos/volt-stories.png',
+      image: './assets/photos/marina_belardi.png',
       title: `#VOLTstories`,
-      description: `“Lorem ipsum dolor
-      sit amet, consectetur
-      adipiscing elit.”`,
-      name: `Danilo Mendes`,
-      carg: `Diretor de Marketing na VOLT`
+      description: `“Fazer parte de uma equipe com espírito jovem
+      é aprender algo novo todos os dias. Estamos sempre curiosos
+      e atentos, em busca por inovação.”`,
+      name: `Marina Belardi`,
+      carg: `Arquiteta`
     },
     {
       id: 2,
-      image: './assets/photos/estrutura-volt.png',
+      image: './assets/photos/valeria_rodrigues.png',
       title: `#VOLTstories`,
-      description: `“!Lorem ipsum dolor
-      sit amet, consectetur
-      adipiscing elit.!”`,
-      name: `Danilo M.`,
-      carg: `VOLT`
+      description: `“O VOLT é o meu todo dia - minha casa, minha família”`,
+      name: `Valéria Rodrigues`,
+      carg: `Administrativo`
+    },
+    {
+      id: 3,
+      image: './assets/photos/carolina_carvalho.png',
+      title: `#VOLTstories`,
+      description: `“Para mim, muito mais que um ambiente agradável para se trabalhar,
+      é importante se sentir acolhida e respeitada. No VOLT, sinto que posso ser eu
+      mesma e me desafio a me tornar a melhor versão de mim todos os dias.”`,
+      name: `Carolina Carvalho`,
+      carg: `CMO - Chief Marketing Officer`
     }
   ];
 
@@ -37,6 +45,7 @@ export class NosComponent implements OnInit, OnDestroy {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    autoplaySpeed: 6500,
   };
 
   constructor( public helperService: HelperService) { }
@@ -53,7 +62,7 @@ export class NosComponent implements OnInit, OnDestroy {
   }
 
   teste() {
-    console.log('teste')
+    console.log('teste');
   }
 
   slickInit(e) {

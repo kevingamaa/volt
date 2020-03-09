@@ -11,29 +11,48 @@ export class HomeComponent implements OnInit {
         {
             id: 1,
             logo: './assets/logos/rappi-logo.png',
-            nome: `Diego Navarro`,
-            tittle: `Diretor de Marketing na Rappi`,
+            // nome: `Diego Navarro`,
+            // tittle: `Diretor de Marketing na Rappi`,
             description: `
-      “Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Integer
-            consequat tincidunt urna ullamcorper vehicula. Donec tincidunt, lacus
-            sit amet efficitur dapibus, ex augue consequat erat."
+      “Primeiro escritório Rappi Brasil, entrega em 21 dias.
+      Empresas com operações dinâmicas precisam de uma estrutura
+      simples, mas funcional. Após a entrega das chaves,
+      realizamos a gestão do escritório para impulsionar a
+      produtividade de uma equipe que exige foco total."
       `,
             image: './assets/photos/escritorio-rappi-volt.png'
         },
         {
             id: 2,
-            logo: './assets/logos/rappi-logo.png',
-            nome: `Diego Navarro`,
-            tittle: `Diretor de Marketing na Rappi`,
+            logo: './assets/logos/mar-logo.png',
+            // nome: `Diego Navarro`,
+            // tittle: `Diretor de Marketing na Rappi`,
             description: `
-            “!Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Integer
-            consequat tincidunt urna ullamcorper vehicula. Donec tincidunt, lacus
-            sit amet efficitur dapibus, ex augue consequat erat!"
+            “Escritório MAR Ventures, modelo Potencial. Reunimos o desejo
+            por qualidade do cliente versus seus recursos e o resultado
+            foi uma solução custo benefício, sem perder o conforto e a
+            estética."
       `,
-            image: './assets/photos/escritorio-rappi-volt.png'
-        }
+            image: './assets/photos/escritorio-mar-ventures.png'
+        },
+        {
+          id: 3,
+          logo: './assets/logos/arvore-logo.png',
+          // nome: `Diego Navarro`,
+          // tittle: `Diretor de Marketing na Rappi`,
+          description: `
+          “Escritório Arvore, empresa que desenvolve experiências
+          interativas usando tecnologias imersivas, como Realidade
+          Virtual, Aumentada e Mista. Em conjunto com fornecedores
+          indicados pelo cliente, buscamos refletir o propósito da
+          empresa no escritório, criando espaços customizados para
+          experimentação de seus produtos. O resultado foi um
+          escritório inovador e tecnológico, com investimento dentro
+          do budget estipulado."
+    `,
+          image: './assets/photos/escritorio-arvore.png'
+      }
+
 
     ];
 
